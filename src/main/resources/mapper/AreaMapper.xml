@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+
+<mapper namespace="org.shf.dao.AreaDao">
+    <!--注册时查询改账号是否存在，保证用户账户唯一-->
+    <select id="selectAreaName" resultType="java.lang.String">
+        select name from area where id = #{areaId}
+    </select>
+
+
+</mapper>
